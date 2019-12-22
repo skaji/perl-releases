@@ -2,7 +2,7 @@ name: update
 
 on:
   schedule:
-    - cron: '25,55 * * * *'
+    - cron: '13,43 * * * *'
 
 jobs:
   perl:
@@ -10,7 +10,9 @@ jobs:
     container:
       image: perl:latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          ref: master
       - name: Install deps
         run: curl -fsSL --compressed https://git.io/cpm | perl - install -g --cpanfile maint/cpanfile --show-build-log-on-failure
       - name: Execute generate.pl
