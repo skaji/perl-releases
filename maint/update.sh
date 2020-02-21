@@ -13,8 +13,8 @@ if [[ $OLD_LINES -ge $NEW_LINES ]]; then
 fi
 
 mv perl-releases.v1.csv.new perl-releases.v1.csv
-git config --global user.name 'Shoichi Kaji'
-git config --global user.email 'skaji@cpan.org'
+git config --global user.name 'github-actions[bot]'
+git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
 git add perl-releases.v1.csv
 git commit -m 'auto update'
 git push https://skaji:$GITHUB_TOKEN@github.com/skaji/perl-releases.git master
