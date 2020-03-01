@@ -13,6 +13,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: master
+      - uses: actions/cache@v1
+        with:
+          path: ~/.perl-cpm/builds
+          key: builds
       - name: Install deps
         run: curl -fsSL --compressed https://git.io/cpm | perl - install -g --cpanfile maint/cpanfile --show-build-log-on-failure
       - name: Execute generate.pl
