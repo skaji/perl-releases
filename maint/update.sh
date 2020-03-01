@@ -16,7 +16,7 @@ mv perl-releases.v1.csv.new perl-releases.v1.csv
 git config --global user.name 'github-actions[bot]'
 git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
 git add perl-releases.v1.csv
-MESSAGE="$(git diff | grep '^+5' | cut -d, -f3)"
+MESSAGE="$(git diff --cached | grep '^+5' | cut -d, -f3)"
 if [[ -z $MESSAGE ]]; then
   MESSAGE='auto update'
 fi
