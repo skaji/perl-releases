@@ -11,6 +11,8 @@
 5.031.002.999,unstable,5.31.2,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.31.2.tar.gz,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.31.2.tar.xz
 5.031.001.999,unstable,5.31.1,https://cpan.metacpan.org/authors/id/E/ET/ETHER/perl-5.31.1.tar.gz,https://cpan.metacpan.org/authors/id/E/ET/ETHER/perl-5.31.1.tar.xz
 5.031.000.999,unstable,5.31.0,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.31.0.tar.gz,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.31.0.tar.xz
+5.030.003.999,stable,5.30.3,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.30.3.tar.gz,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.30.3.tar.xz
+5.030.003.001,testing,5.30.3-RC1,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.30.3-RC1.tar.gz,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.30.3-RC1.tar.xz
 5.030.002.999,stable,5.30.2,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.30.2.tar.gz,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.30.2.tar.xz
 5.030.002.001,testing,5.30.2-RC1,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.30.2-RC1.tar.gz,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.30.2-RC1.tar.xz
 5.030.001.999,stable,5.30.1,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.30.1.tar.gz,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.30.1.tar.xz
@@ -29,6 +31,8 @@
 5.029.002.999,unstable,5.29.2,https://cpan.metacpan.org/authors/id/B/BI/BINGOS/perl-5.29.2.tar.gz,https://cpan.metacpan.org/authors/id/B/BI/BINGOS/perl-5.29.2.tar.xz
 5.029.001.999,unstable,5.29.1,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.29.1.tar.gz,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.29.1.tar.xz
 5.029.000.999,unstable,5.29.0,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.29.0.tar.gz,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.29.0.tar.xz
+5.028.003.999,stable,5.28.3,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.28.3.tar.gz,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.28.3.tar.xz
+5.028.003.001,testing,5.28.3-RC1,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.28.3-RC1.tar.gz,https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.28.3-RC1.tar.xz
 5.028.002.999,stable,5.28.2,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.28.2.tar.gz,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.28.2.tar.xz
 5.028.002.001,testing,5.28.2-RC1,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.28.2-RC1.tar.gz,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.28.2-RC1.tar.xz
 5.028.001.999,stable,5.28.1,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.28.1.tar.gz,https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.28.1.tar.xz
