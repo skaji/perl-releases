@@ -10,7 +10,8 @@ for my $r (CPAN::Perl::Releases::MetaCPAN->new->get->@*) {
     my $key = sprintf "5.%03d.%03d.%03d", $major, $minor, (defined $RC ? $RC : 999);
     next if $key lt "5.008.001.000";
     my $status = $major % 2 == 1 ? "unstable" : defined $RC ? "testing" : "stable";
-    my $gz_url = $r->{download_url} =~ s/\.(bz2|xz)$/.gz/r;
+    my $download_url = $r->{download_url} or die "empty download_url for $version";
+    my $gz_url = $download_url =~ s/\.(bz2|xz)$/.gz/r;
     my $xz_url = $key gt "5.021.005.999" && $version ne "5.23.6" ? $gz_url =~ s/\.gz$/.xz/r : "NA";
 
     push @release, {
