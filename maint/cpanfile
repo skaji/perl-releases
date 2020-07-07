@@ -1,1 +1,2 @@
 requires 'CPAN::Perl::Releases::MetaCPAN';
+requires 'Sub::Retry';
