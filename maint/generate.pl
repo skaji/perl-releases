@@ -2,15 +2,22 @@
 use 5.30.0;
 use warnings;
 use CPAN::Perl::Releases::MetaCPAN;
-use Sub::Retry 'retry';
 
-my $releases = retry 3, 10, sub {
-    my $releases = CPAN::Perl::Releases::MetaCPAN->new->get;
-     if (my @empty = grep { !$_->{download_url} } $releases->@*) {
-         die "Empty download_url for ", (join ", ", map { $_->{name} } @empty);
-     }
-     $releases;
-};
+sub warn_and_exit {
+    my $msg = "@_";
+    chomp $msg;
+    print "::warning::$msg\n";
+    exit 0;
+}
+
+my $releases = eval { CPAN::Perl::Releases::MetaCPAN->new->get };
+if (my $err = $@) {
+    warn_and_exit $@;
+}
+
+if (my @empty = grep { !$_->{download_url} } $releases->@*) {
+    warn_and_exit "Empty download_url for ", (join ", ", map { $_->{name} } @empty);
+}
 
 my @release;
 for my $r ($releases->@*) {
