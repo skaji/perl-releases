@@ -21,4 +21,4 @@ if [[ -z $MESSAGE ]]; then
   MESSAGE='auto update'
 fi
 git commit -m "$MESSAGE"
-git push https://skaji:$GITHUB_TOKEN@github.com/skaji/perl-releases.git master
+git push https://skaji:$GITHUB_TOKEN@github.com/skaji/perl-releases.git main

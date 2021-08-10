@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: master
+          ref: main
       - name: Install deps
         run: curl -fsSL --compressed https://git.io/cpm | perl - install -g --cpanfile maint/cpanfile --show-build-log-on-failure
       - name: Execute generate.pl
