@@ -1,0 +1,4 @@
+prereqs:
+  runtime:
+    requires:
+      CPAN::Perl::Releases::MetaCPAN:
