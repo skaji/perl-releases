@@ -17,6 +17,7 @@ if (my @empty = grep { !$_->{download_url} } $releases->@*) {
     warn_and_exit "Empty download_url for ", (join ", ", map { $_->{name} } @empty);
 }
 
+my %latest;
 my @release;
 for my $r ($releases->@*) {
     my ($version, $major, $minor, $patch, $RC) = $r->{name} =~ /^perl-((\d)\.(\d+)\.(\d+)(?:-(?:RC|TRIAL)(\d+))?)$/;
@@ -24,6 +25,12 @@ for my $r ($releases->@*) {
     my $key = sprintf "%d.%03d.%03d.%03d", $major, $minor, $patch, (defined $RC ? $RC : 999);
     next if $key lt "5.008.001.000";
     my $status = $minor % 2 == 1 ? "unstable" : defined $RC ? "testing" : "stable";
+    if ($status eq "stable") {
+        my $k = "$major.$minor";
+        if (!$latest{$k} or $latest{$k}{patch} < $patch) {
+            $latest{$k} = { version => $version, patch => $patch };
+        }
+    }
     my $download_url = $r->{download_url};
     my $gz_url = $download_url =~ s/\.(bz2|xz)$/.gz/r;
     my $xz_url = $key gt "5.021.005.999" && $version ne "5.23.6" ? $gz_url =~ s/\.gz$/.xz/r : "NA";
@@ -34,9 +41,18 @@ for my $r ($releases->@*) {
         version => $version,
         gz_url => $gz_url,
         xz_url => $xz_url,
+        latest => "",
     };
 }
 
+for my $v (map { $_->{version} } values %latest) {
+    for my $r (@release) {
+        if ($r->{version} eq $v) {
+            $r->{latest} = "latest";
+        }
+    }
+}
+
 for my $r (sort { $b->{key} cmp $a->{key} } @release) {
-    say join ",", $r->@{qw(key status version gz_url xz_url)};
+    say join ",", ($r->@{qw(key status version gz_url xz_url latest)}, "");
 }

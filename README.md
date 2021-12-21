@@ -14,6 +14,7 @@ Each line of [perl-releases.v1.csv](perl-releases.v1.csv) contains the following
 * 3rd: version like 5.30.1
 * 4th: gz tarball url
 * 5th: xz tarball url if any (if there is no xz tarball for this version, then it will be `NA`)
+* 6th: latest release in each stable releases
 
 An example is:
 
@@ -24,6 +25,7 @@ An example is:
 3: 5.30.0
 4: https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.30.0.tar.gz
 5: https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/perl-5.30.0.tar.xz
+6: (empty)
 ```
 
 # Credit
