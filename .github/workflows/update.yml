@@ -14,7 +14,7 @@ jobs:
         with:
           ref: main
       - name: Install deps
-        run: curl -fsSL --compressed https://git.io/cpm | perl - install -g --cpmfile maint/cpm.yml --show-build-log-on-failure
+        run: curl -fsSL --compressed https://raw.githubusercontent.com/skaji/cpm/main/cpm | perl - install -g --cpmfile maint/cpm.yml --show-build-log-on-failure
       - name: Execute generate.pl
         run: perl maint/generate.pl > perl-releases.v1.csv.new
       - name: Update if necessary
