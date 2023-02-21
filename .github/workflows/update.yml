@@ -7,16 +7,16 @@ on:
 jobs:
   perl:
     runs-on: ubuntu-latest
-    container:
-      image: perl:latest
     steps:
       - uses: actions/checkout@v3
         with:
           ref: main
+      - name: Install perl
+        run: curl -fsSL --compressed https://raw.githubusercontent.com/skaji/relocatable-perl/main/perl-install | bash -s ~/perl
       - name: Install deps
-        run: curl -fsSL --compressed https://raw.githubusercontent.com/skaji/cpm/main/cpm | perl - install -g --cpmfile maint/cpm.yml --show-build-log-on-failure
+        run: curl -fsSL --compressed https://raw.githubusercontent.com/skaji/cpm/main/cpm | ~/perl/bin/perl - install -g --cpmfile maint/cpm.yml --show-build-log-on-failure
       - name: Execute generate.pl
-        run: perl maint/generate.pl > perl-releases.v1.csv.new
+        run: ~/perl/bin/perl maint/generate.pl > perl-releases.v1.csv.new
       - name: Update if necessary
         run: bash maint/update.sh
         env:
